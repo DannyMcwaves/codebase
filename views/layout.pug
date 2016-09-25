@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href="../css/all.css")
+    link(rel='stylesheet', href='../css/font.css')
+    link(rel='stylesheet', href='../css/bootstrap.min.css')
+    link(rel='stylesheet', href='../css/style.css')
+
+  body
+    block content
+    - type = isFile
+
+    section#footer.text-xs-center.p-b-2
+        article(class="m-t-2")
+            a(href="http://www.facebook.com/dannymcwaves.halbrok")
+                img(src="/stylesheets/facebook.svg")
+            a(href="http://www.twitter.com/dannymcwaves")
+                img(src="/stylesheets/twitter.svg")
+            a(href="https://gh.linkedin.com/in/ayikpah-danny-mcwaves-4b2b58a7")
+                img(src="/stylesheets/linkedin.svg")
+            a(href="http://github.com/DannyMcwaves")
+                img(src="/stylesheets/download.png")
+            a(href="mailto:dannymcwaves96@gmail.com")
+                img(src="/stylesheets/mail.svg")
+            a(href="http://www.instagram.com/DannyMcwaves")
+                img(src="/stylesheets/inst.jpeg")
+
+        article(class="text-success p-t-1") &copy; A Danny Mcwaves Presentation.
+
+    script(src="../js/jquery-2.1.4.min.js")
+    script(src="../js/bootstrap.min.js")
+    script(src="../js/index.js")
+    - if (type === true) {
+        script(src="../js/format.js")
+    -}

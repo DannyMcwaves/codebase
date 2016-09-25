@@ -1,0 +1,87 @@
+body {
+
+}
+
+h2, h1 {
+    color: #cc3366;
+    font: 2em Montserrat-Bold, Helvetica, Arial, sans-serif;
+}
+button {
+    font-family: Quicksand-Bold;
+}
+
+a {
+  color: #00B7FF;
+  outline: 0px;
+  border: 0px;
+}
+div.navbar a.navbar-brand button{
+    font-family: Montserrat-Black;
+}
+
+a.fixed{
+    bottom: 10px;
+    left: 15px;
+}
+
+a.fixed button {
+        border-radius: 5px;
+        font-family: Montserrat-Black;
+        transition: all 1s;
+}
+
+a.fixed button:hover {
+    transform: scale(1.1);
+}
+
+a:hover{
+    color: yellowgreen;
+}
+
+figcaption {
+    text-align: center;
+    color: red;
+    font-family: Lato-Heavy
+}
+
+figure img{
+    width: 180px;
+    height: 175px;
+    transition: all 0.4s;
+}
+figure img:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+    opacity: 0.7;
+}
+
+p {
+    color: #330033;
+}
+pre p{
+    font-size: 13px;
+    font-family: Raleway-Black;
+    width: 500px;
+    text-overflow: ellipsis;
+}
+pre{
+    width: 100%;
+    text-overflow: ellipsis;
+}
+
+#footer a img{
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+}
+
+#footer article{
+    font-family: Montserrat-Bold;
+}
+nav.navbar{
+    border-bottom: 2px solid white;
+}
+
+nav.navbar button.btn{
+    font-family: Montserrat-Black;
+}

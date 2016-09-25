@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    - con = content
+    - main = main
+    - pathname = path
+
+    nav.navbar.navbar-full.navbar-dark.bg-faded
+        a.navbar-brand.btn-group(href="/")
+            button.btn.btn-success
+                | FILE SYSTEM
+        article.text-xs-center
+            h2.text-success= title
+
+    a.fixed(href="/read/path?pathname=" + main(pathname).join("../"))
+        button(class=['btn', 'btn-success']) &laquo;
+
+    div#output.p-a-3.bg-inverse= con
