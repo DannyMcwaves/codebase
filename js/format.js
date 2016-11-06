@@ -50,7 +50,7 @@
 	// and passing it as a callback to the myQuery function and then it gets executed.
 	// I developed it to use it for an adhoc use purpose.
 
-	content = $("div").text();
+	content = $("div#output").text();
 	re =  /(\b\n\b)|(\n)/g;
 	n_con = content.replace(re, "<br>");
 

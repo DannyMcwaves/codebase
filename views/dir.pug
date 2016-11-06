@@ -1,4 +1,4 @@
-extends layout
+extends layout.pug
 
 block content
     - title = title
@@ -19,83 +19,52 @@ block content
         - }
     - }
 
-    div.navbar.navbar-full.navbar-dark.bg-inverse
-        a.navbar-brand.btn-group(href="/")
-            button.btn.btn-success
-                | FILE SYSTEM
-        div.text-xs-center
-            h2.text-success= title
+    a.fixed(href="/path?pathname=" + main(pathname).join("../"))
+        button(class=['btn', 'bg-black', 'text-white']) &laquo;
 
-    a.fixed(href="/read/path?pathname=" + main(pathname).join("../"))
-        button(class=['btn', 'btn-success']) &laquo;
-
-    div(class=["p-t-3", "text-xs-center"])
-        h1.text-primary
-            | F O L D E R S
-        - for (i = 0; i < sorted.length; i++) {
-            - if (main(pathname + "/" + sorted[i]).isDir()) {
-                a(href="/read/path?pathname=" + pathname + "/" + sorted[i])
-                    figure(class=["figure", "p-a-1"])
-                        img(src="../stylesheets/folder.png" class="figure-img img-fluid img-rounded")
-                        figcaption(class="figure-caption text-info")= sorted[i]
-            - }
-        -}
-
-
-        div(class=["p-t-3", "text-xs-center"])
-            h1.text-danger
-                | F I L E S
+    div#body.container-fluid
+        div.row.m-a-3
             - for (i = 0; i < sorted.length; i++) {
-                - if (main(pathname + "/" + sorted[i]).isFile()) {
-                    - mime = sorted[i].split(".").pop()
+                - if (main(pathname + "/" + sorted[i]).isDir()) {
 
+                    a(href="/path?pathname=" + pathname + "/" + sorted[i])
+                        figure.figure.col-xs-6.col-sm-4.col-md-3.text-xs-center
+                            img.img-fluid(src="../images/folder.png" class="figure-img")
+                            figcaption(class="figure-caption text-black")= sorted[i]
+
+                - } else if (main(pathname + "/" + sorted[i]).isFile()) {
+
+                    - mime = sorted[i].split(".").pop()
                     - if (mime === "png" || mime === "jpg" || mime === "jpeg" || mime === "gif" || mime === "svg" || mime === "ttf" || mime==="otf") {
                         a
-                        figure(class="figure p-a-1")
-                            - if (mime === "js") {
-                                img(src="../stylesheets/js1.png" class="figure-img img-fluid")
-                            - } else if (mime === "png" || mime === "jpg" || mime === "jpeg" || mime === "gif" || mime === "svg") {
-                                img(src="/stylesheets/"+sorted[i] class="figure-img img-fluid")
-                            - } else if (mime === "otf" || mime === "ttf") {
-                                div(style="font-family: " +sorted[i].split(".")[0] + ";")
-                                    article the quick brown fox jump over the lazy dog
-                                    article THE QUICK BROWN FOX JUMP OVER THE LAZY DOG.
-                                    article 123456789.
-                            - }else if (mime === "py") {
-                                img(src="/stylesheets/python.png" class="figure-img img-fluid")
-                            - } else if (mime === "css") {
-                                img(src="/stylesheets/index.png" class="figure-img img-fluid")
-                            - } else if(mime === "html" || mime === "pug") {
-                                img(src="/stylesheets/html1.png" class="figure-img img-fluid")
-                            - } else {
-                                img(src="../stylesheets/file3.png" class="figure-img img-fluid")
-                            - }
-                            figcaption(class="figure-caption text-danger")= sorted[i]
-
-                    - } else {
-                        a(href="/read/path?pathname=" + pathname + "/" + sorted[i])
-                            figure(class="figure p-a-1")
-                                - if (mime === "js") {
-                                    img(src="../stylesheets/js1.png" class="figure-img img-fluid")
-                                -  } else if (mime === "png" || mime === "jpg" || mime === "jpeg" || mime === "gif" || mime === "svg") {
-                                    img(src="/stylesheets/"+sorted[i] class="figure-img img-fluid")
-                                - } else if (mime === "otf" || mime === "ttf") {
+                            - if (mime === "ttf" || mime === "otf") {
+                                figure.font.figure.col-xs-12.col-sm-4.col-md-4.text-xs-center
                                     div(style="font-family: " +sorted[i].split(".")[0] + ";")
                                         article the quick brown fox jump over the lazy dog
                                         article THE QUICK BROWN FOX JUMP OVER THE LAZY DOG.
                                         article 123456789.
-                                - }else if (mime === "py") {
-                                    img(src="/stylesheets/python.png" class="figure-img img-fluid")
+                                    figcaption(class="figure-caption")= sorted[i]
+                            - } else {
+                                    figure.figure.col-xs-12.col-sm-4.col-md-3.text-xs-center
+                                        img(src="/images/"+sorted[i] class="figure-img img-fluid")
+                                        figcaption(class="figure-caption")= sorted[i]
+                            - }
+                    - } else {
+                        a(href="/path?pathname=" + pathname + "/" + sorted[i])
+
+                            figure.figure.col-xs-6.col-sm-4.col-md-3.text-xs-center
+                                - if (mime === "js") {
+                                    img(src="../images/jsFil.jpeg" class="figure-img img-fluid")
+                                - } else if (mime === "py") {
+                                    img(src="/images/pyFile2.jpeg" class="figure-img img-fluid")
                                 - } else if (mime === "css") {
-                                    img(src="/stylesheets/index.png" class="figure-img img-fluid")
+                                    img(src="/images/cssFile.jpeg" class="figure-img img-fluid")
                                 - } else if(mime === "html" || mime === "pug") {
-                                    img(src="/stylesheets/html1.png" class="figure-img img-fluid")
+                                    img(src="/images/htmlFile2.jpeg" class="figure-img img-fluid")
                                 - } else {
-                                    img(src="../stylesheets/file3.png" class="figure-img img-fluid")
+                                    img(src="../images/textFile.jpeg" class="figure-img img-fluid")
                                 - }
-                                figcaption(class="figure-caption text-danger")= sorted[i]
+                                figcaption(class="figure-caption")= sorted[i]
                     - }
-
-
                 - }
             - }

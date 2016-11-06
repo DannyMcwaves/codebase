@@ -1,0 +1,52 @@
+else if () {
+    
+
+    - if (mime === "png" || mime === "jpg" || mime === "jpeg" || mime === "gif" || mime === "svg" || mime === "ttf" || mime==="otf") {
+        a
+            figure(class="figure p-a-1")
+            - if (mime === "js") {
+                img(src="../images/js1.png" class="figure-img img-fluid")
+            - } else if (mime === "png" || mime === "jpg" || mime === "jpeg" || mime === "gif" || mime === "svg") {
+                img(src="/images/"+sorted[i] class="figure-img img-fluid")
+            - } else if (mime === "otf" || mime === "ttf") {
+                div(style="font-family: " +sorted[i].split(".")[0] + ";")
+                    article the quick brown fox jump over the lazy dog
+                    article THE QUICK BROWN FOX JUMP OVER THE LAZY DOG.
+                    article 123456789.
+            - }else if (mime === "py") {
+                img(src="/images/python.png" class="figure-img img-fluid")
+            - } else if (mime === "css") {
+                img(src="/images/index.png" class="figure-img img-fluid")
+            - } else if(mime === "html" || mime === "pug") {
+                img(src="/images/html1.png" class="figure-img img-fluid")
+            - } else {
+                img(src="../images/file3.png" class="figure-img img-fluid")
+            - }
+            figcaption(class="figure-caption text-danger")= sorted[i]
+
+- } else {
+    a(href="/read/path?pathname=" + pathname + "/" + sorted[i])
+        figure(class="figure p-a-1")
+        - if (mime === "js") {
+            img(src="../images/js1.png" class="figure-img img-fluid")
+        -  } else if (mime === "png" || mime === "jpg" || mime === "jpeg" || mime === "gif" || mime === "svg") {
+            img(src="/images/"+sorted[i] class="figure-img img-fluid")
+        - } else if (mime === "otf" || mime === "ttf") {
+            div(style="font-family: " +sorted[i].split(".")[0] + ";")
+                article the quick brown fox jump over the lazy dog
+                article THE QUICK BROWN FOX JUMP OVER THE LAZY DOG.
+                article 123456789.
+        - }else if (mime === "py") {
+            img(src="/images/python.png" class="figure-img img-fluid")
+        - } else if (mime === "css") {
+            img(src="/images/index.png" class="figure-img img-fluid")
+        - } else if(mime === "html" || mime === "pug") {
+            img(src="/images/html1.png" class="figure-img img-fluid")
+        - } else {
+            img(src="../images/file3.png" class="figure-img img-fluid")
+        - }
+        figcaption(class="figure-caption text-danger")= sorted[i]
+- }
+
+
+- }

@@ -1,5 +1,24 @@
-extends layout
+doctype html
+html(ng-app="app")
+  head
+    title myCodebase
+    link(rel='stylesheet', href='../css/bootstrap.min.css')
+    link(rel='stylesheet', href="../css/util.css")
+    link(rel='stylesheet', href='../css/font.css')
+    link(rel="stylesheet", href="../css/app.css")
+    link(rel="icon" href="../images/imagess.jpg")
+    script(src="../js/angular.min.js")
 
-block content
-  h1= title
-  p Welcome to #{title}
+  body
+    div.view-container
+        ng-view.view
+
+
+    script(src="../js/jquery-2.1.4.min.js")
+    script(src="../js/tether.min.js")
+    script(src="../js/bootstrap.min.js")
+    script(src="../js/util.js")
+    script(src="../modules/angular-route.min.js")
+    script(src="../js/index.js")
+    script(src="../directives/directive.js")
+    script(src="../controllers/controllers.js")

@@ -1,19 +1,15 @@
-extends layout
+extends layout.pug
 
 block content
     - con = content
     - main = main
     - pathname = path
 
-    nav.navbar.navbar-full.navbar-dark.bg-faded
-        a.navbar-brand.btn-group(href="/")
-            button.btn.btn-success
-                | FILE SYSTEM
-        article.text-xs-center
-            h2.text-success= title
+    h2.text-muted.text-xs-center= title
 
-    a.fixed(href="/read/path?pathname=" + main(pathname).join("../"))
-        button(class=['btn', 'btn-success']) &laquo;
+    a.fixed(href="/path?pathname=" + main(pathname).join("../"))
+        button(class=['btn', 'bg-black']) &laquo;
 
-    div#output.p-a-3.bg-inverse= con
-   
+    div.container-fluid
+        div.row
+            div.col-xs-12.col-sm-10.col-sm-push-1.col-md-8#output.p-a-3= con

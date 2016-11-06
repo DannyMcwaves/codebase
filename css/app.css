@@ -1,0 +1,149 @@
+body{
+	background-image: url(../images/geek.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 400px;
+	background-attachment: scroll;
+}
+
+.view-container {
+  position:relative;
+}
+.view-container > .view.ng-animate {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  min-height:500px;
+}
+.view.ng-enter, .view.ng-leave,{
+  transition:1s linear all;
+}
+.view.ng-enter {
+  transform:translateX(100%);
+}
+.view.ng-enter.ng-enter-active, .view.ng-leave {
+  transform:translateX(0%);
+}
+.view.ng-leave.ng-leave-active {
+  transform:translateX(-100%);
+}
+
+
+
+body #home{
+	height: 400px;
+}
+
+body #home .bottom {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+/*	box-shadow: 2px 2px 2px grey;*/
+}
+
+#home .bottom .row{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+body #home .bottom a{
+	color: black;
+	font-family: Montserrat-SemiBold;
+	border-bottom: 3px solid black;
+	border-radius: 0px;
+	transition: all 0.3s;
+}
+
+body #home .bottom a:hover{
+	color: dimgrey;
+	border-bottom-color: dimgrey;
+}
+
+
+#options{
+	background-color: white;
+}
+
+#options .row .card img{
+	height: 100%;
+	width: 100%;
+}
+
+#options .row .card .cardHead{
+	color: black;
+	font-family: Montserrat-SemiBold;
+	font-size: 0.7em;
+}
+
+div#jumb{
+	background-image: url(../images/map.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+div#jumb .jumbotron{
+	opacity: 0.9;
+	background-color: darkslategray;
+	margin-bottom: 0px;
+	color: gainsboro;
+}
+
+div#node{
+	position: relative;
+	background-color: darkslategray;
+}
+
+div#node div#row{
+	background-color: darkslategray;
+	opacity: 0.8;
+}
+
+div#node .jumbotron{
+	bottom: 0px;
+	margin-bottom: 0px;
+	right: 0px;
+	background-color: darkslategray;
+	color: white;
+	text-align: right;
+}
+
+
+#markup{
+	width: 100%;
+	background-image: url(../images/virus.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+#mrow{
+/*	background-color: black;*/
+/*	opacity: 0.7;*/
+}
+
+#mrow .card{
+	margin-bottom: 0px;
+	border: 2px solid darkgreen;
+	border-radius: 10px;
+	color: darkslategray;
+}
+
+#mrow .card .cardBody{
+	color: black;
+}
+
+#mrow .card .cardHead{
+	text-align: center;
+	font-family: Montserrat-Black;
+	color: darkslategray;
+}
+
+#footer{
+	background-color: white;
+}
+
+#footer .footImg img{
+	height: 50px;
+	width: 50px;
+}

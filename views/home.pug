@@ -1,0 +1,77 @@
+
+div#home.rel.container-fluid
+    header.m-a-2.row
+        div.btn-group.col-xs-12.col-sm-4.hidden-xs-down
+            button.btn.btn-success.sm-font.btn-sm MYCODEBASE
+
+        form.input-group.col-xs-12.col-sm-8
+            input.form-control.xs-font(type="text" placeholder="search for a file or folder")
+            span.input-group-addon.bg-success.hand.sm-font SEARCH
+
+    div.bottom.row.container-fluid(ng-include="'/header'")
+
+
+div#options.container-fluid.p-t-3.p-b-3
+    div.row.text-xs-center
+        a(href="/path?pathname=./pythons")
+            div.col-xs-12.col-sm-4.col-md-3.col-md-offset-2
+                card(src="/images/py.png" head="python")
+        a(href="/path?pathname=./views")
+            div.col-xs-12.col-sm-4.col-md-3
+                card(src="/images/mkup.png" head="markup")
+        a(href="/path?pathname=./js")
+            div.col-xs-12.col-sm-4.col-md-3
+                card(src="/images/js8.png" head="javascript")
+
+div#jumb
+    jumbotron(head="python")
+        | This repositroy has some of the codes that I have written and will write in python.
+        | this codebase is very large and the codes might be a little bit complex for a non-pythonista or
+        | a newbie in the language who cannot get around all the constructs of the language.
+        | You are most likely to see practice codes too that do very simple things. Instructions and docs
+        | about the language and most importantly packages, modules and simple functions. Click the link below
+        | to view the code repository.<br/>
+        div.text-xs-center.p-t-2
+            a(href="/path?pathname=./pythons")
+                button.btn.btn-sm.btn-primary python
+
+div#node.container-fluid
+    div#row.row
+        jumbotron.col-md-10.pull-md-right(head="NODE.js and JavaScript")
+            | Anyone who codes knows this. They have similar constructs and syntax except for a few subtleties
+            |that
+            | come with both of them and where or how they are used. I happen to be well vexed in both of them
+            |and
+            | as a matter of fact, this whole site is built heavily on this two technologies. You can browse
+            |all
+            |the codes of this site and also view the code repository or both node.js and JavaScript below
+            div.text-xs-center
+                a(href="/path?pathname=./nodes")
+                    button.btn.btn-sm.btn-primary.m-r-1.m-t-2 NODE.js
+                a(href="/path?pathname=./js")
+                    button.btn.btn-sm.btn-danger.m-t-2 JavaScript
+
+div#markup.container-fluid
+    div#mrow.row.p-t-3.p-b-3
+
+        card.col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.m-t-3.card-inverse(head="MARKUP")
+            | HTML is the language of the web as the saying popularly goes. I couldn't show you this page without
+            | a bit of markup. so I have to include it in my codebase too. But at the backend, tryiing hard to
+            | write a piece of markup for every document can be rather grueling so I used a templating tool
+            | called pug formerly known as Jade to write a template for the html syntax. So instead of showing
+            |you html, what you will see is rather a template written in pug.
+            div.text-xs-center.p-t-2
+                a.btn.btn-sm.btn-danger.sm-font(href="/path?pathname=./views") html
+
+        card.col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.card-inverse.m-b-3(head="STYLESHEETS")
+            | Stylesheets, the presentation tool, are also very simple to write too. Ooh and don't worry, even
+            | though there are templating tools out there for CSS, I have not used any. It is pure CSS you will
+            | see in this codebase.
+            div.text-xs-center.p-t-2
+                a.btn.btn-sm.btn-primary.sm-font(href="/path?pathname=./css") css
+
+div#footer.container-fluid
+    div.row.text-xs-center.text-sm-left
+        div.col-xs-12.col-sm-3.col-md-4.col-sm-push-1
+            img.img-fluid(ng-src="/images/cde.png")
+        div.col-xs-12.col-sm-8.col-md-7.footImg(ng-include="'/footer'")

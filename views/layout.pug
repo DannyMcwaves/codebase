@@ -1,36 +1,64 @@
+
+- type = isFile
 doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href="../css/all.css")
-    link(rel='stylesheet', href='../css/font.css')
-    link(rel='stylesheet', href='../css/bootstrap.min.css')
-    link(rel='stylesheet', href='../css/style.css')
+    link(rel='stylesheet', href="/css/util.css")
+    link(rel='stylesheet', href='/css/font.css')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/style.css')
 
   body
+
+    div#head.container-fluid
+      div.navbar.navbar-full.navbar-light.bg-white.row.text-xs-center.text-sm-left
+
+          div.navbar-brand.col-xs-6.col-xs-push-3.col-sm-3.col-sm-push-1
+              a(href="/")
+                  img.img-fluid(src="/images/cde.png" height="100px" width="100px")
+
+          nav.nav-inline.col-xs-12.col-sm-7.m-t-2.text-md-center.p-b-1
+              a.btn.btn-sm.nav-link.sm-font(href="/path?pathname=./pythons") PYTHON
+              a.btn.btn-sm.nav-link.sm-font(href="/path?pathname=./nodes") NODE.js
+              a.btn.btn-sm.nav-link.sm-font(href="/path?pathname=./js") JAVASCRIPT
+              a.btn.btn-sm.nav-link.sm-font(href="/path?pathname=./views") HTML
+              a.btn.btn-sm.nav-link.sm-font(href="/path?pathname=./css") CSS
+
     block content
-    - type = isFile
+
+    div#footer(class="text-xs-center p-t-3")
+        article
+            a(href="/" class="btn btn-sm sm-font") Home
+            a(href="/path?pathname=./pythons" class="btn btn-sm sm-font") PYTHON
+            a(href="/path?pathname=./nodes"  class="btn btn-sm sm-font") NODE.js
+            a(href="/path?pathname=./js" class="btn btn-sm sm-font") JavaScript
+            a(href="/path?pathname=./css" class="btn btn-sm sm-font") CSS
+            a(href="/path?pathname=./views" class="btn btn-sm sm-font") HTML
+            a(href="/path?pathname=./routes" class="btn btn-sm sm-font") ROUTES
+            a(href="/path?pathname=./fonts" class="btn btn-sm sm-font") FONTS
+            a(href="/path?pathname=./images" class="btn btn-sm sm-font") IMAGES
 
     section#footer.text-xs-center.p-b-2
         article(class="m-t-2")
             a(href="http://www.facebook.com/dannymcwaves.halbrok")
-                img(src="/stylesheets/facebook.svg")
+                img(src="/images/social/facebook.svg")
             a(href="http://www.twitter.com/dannymcwaves")
-                img(src="/stylesheets/twitter.svg")
-            a(href="https://gh.linkedin.com/in/ayikpah-daniel-amanor-mcwaves-4b2b58a7")
-                img(src="/stylesheets/linkedin.svg")
+                img(src="/images/social/twitter.svg")
+            a(href="https://gh.linkedin.com/in/ayikpah-danny-mcwaves-4b2b58a7")
+                img(src="/images/social/linkedin.svg")
             a(href="http://github.com/DannyMcwaves")
-                img(src="/stylesheets/download.png")
+                img(src="/images/social/download.png")
             a(href="mailto:dannymcwaves96@gmail.com")
-                img(src="/stylesheets/mail.svg")
+                img(src="/images/social/mail.svg")
             a(href="http://www.instagram.com/DannyMcwaves")
-                img(src="/stylesheets/inst.jpeg")
+                img(src="/images/social/inst.jpeg")
 
-        article(class="text-success p-t-1") &copy; A Danny Mcwaves Presentation.
+        article(class="text-success p-t-1 xs-font") &copy; A Danny Mcwaves Presentation.
 
-    script(src="../js/jquery-2.1.4.min.js")
-    script(src="../js/bootstrap.min.js")
-    script(src="../js/index.js")
+    script(src="/js/jquery-2.1.4.min.js")
+    script(src="/js/bootstrap.min.js")
+    script(src="/js/index.js")
     - if (type === true) {
-        script(src="../js/format.js")
+        script(src="/js/format.js")
     -}

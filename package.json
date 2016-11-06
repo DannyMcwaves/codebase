@@ -1,18 +1,22 @@
 {
-  "name": "application-name",
+  "name": "codebase",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "body-parser": "~1.0.0",
-    "cookie-parser": "~1.0.1",
-    "debug": "~0.7.4",
-    "express": "~4.0.0",
-    "jade": "~1.3.0",
-    "morgan": "~1.0.0",
-    "static-favicon": "~1.0.0",
+    "body-parser": "~1.15.2",
+    "compression": "^1.6.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "errorhandler": "^1.4.3",
+    "express": "~4.14.0",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "pug": "^2.0.0-beta6",
+    "serve-index": "^1.1.6",
+    "static-favicon": "~2.0.0-alpha",
     "stylus": "^0.54.5"
   }
 }

@@ -1,10 +1,13 @@
+var angular = window.angular,
+	$ = window.jQuery,
+	app = angular.module("app", ["ngRoute"]);
 
-$("p").click(function (event) {
+
+app.config(function ($routeProvider) {
     "use strict";
-    $.get('/mi', function (res) {
-        window.alert(res);
-    });
+    $routeProvider
+		.when("/", {
+			templateUrl: "/home"
+		});
+	
 });
-
-// document.cookie = "my very own session";
-// window.alert(document.cookie);
